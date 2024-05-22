@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Tina CMS Development (npm: dev)",
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"detail": "tinacms dev -c \"next dev\"",
+		},
+		{
+            "label": "GitHub Codespace Launch",
+            "type": "shell",
+            "command": "./codespaces-init.sh",
+            "presentation": {
+                "group": "buildGroup",
+                "reveal": "always",
+                "panel": "dedicated",
+            },
+			"problemMatcher": [],
+			"runOptions": {
+				"runOn": "folderOpen"
+			}
+        }
+	]
+}

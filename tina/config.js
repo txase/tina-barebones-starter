@@ -28,6 +28,10 @@ export const config = defineConfig({
   schema: {
     collections: [page, post],
   },
+  contentApiUrlOverride: // Use port forwarding URL if we're running on a GitHub Codespace
+    process.env.CODESPACE_NAME ?
+    `https://${process.env.CODESPACE_NAME}-4001.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/graphql` :
+    undefined,
 });
 
 export default config;
